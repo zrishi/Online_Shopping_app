@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">ShoppingKart</string>
+    <string name="register">You are not a Member?</string>
+    //Headings
+    <string name="heading_one">Quick &amp; Easy Payments</string>
+    <string name="heading_two">Instant Notifications</string>
+    <string name="heading_three">Cashless Payment</string>
+    <string name="heading_fourth">Pay Anywhere</string>
+
+    //Description
+    <string name="desc_one">Grow your Business By Accepting Card Payments with The New Card Reader</string>
+    <string name="desc_two">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
+    <string name="desc_three">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
+    <string name="desc_fourth">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
+
+    //Nav
+    <string name="menu_profile">My Profile</string>
+    <string name="menu_dashboard">DashBoard</string>
+    <string name="menu_cart">My Orders</string>
+    <string name="nav_share">Share</string>
+    <string name="nav_rate">Rate Us</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_nav">Nav</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+</resources>

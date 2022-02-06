@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/welcome"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <android.widget.Button
+            android:id="@+id/login"
+            android:layout_width="130dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="148dp"
+            android:background="@drawable/round_btn"
+            android:text="Login"
+            android:textColor="#FFCDD2"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/primaryred"/>
+
+        <TextView
+            android:id="@+id/msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/adamina"
+            android:text="@string/register"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="190dp"
+            android:layout_marginBottom="20dp"
+            android:background="#00000000"
+            android:text="REGISTER"
+            android:textColor="#E61515"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
