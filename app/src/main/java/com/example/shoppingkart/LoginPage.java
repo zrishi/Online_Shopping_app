@@ -26,52 +26,44 @@ public class LoginPage extends AppCompatActivity {
         btn2 = findViewById(R.id.reg);
         email = findViewById(R.id.userid);
         pass = findViewById(R.id.password);
-
-
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String em=email.getText().toString().trim();
-                String pw=pass.getText().toString().trim();
-
-                String Useremail=sharedPreferences.getString("email","");
-                String Userpassword=sharedPreferences.getString("password","");
-                if(em.equals(""))
+        btn1.setOnClickListener(v -> {
+            String em=email.getText().toString().trim();
+            String pw=pass.getText().toString().trim();
+            String Useremail=sharedPreferences.getString("email","");
+            String Userpassword=sharedPreferences.getString("password","");
+            if(em.equals(""))
+            {
+                Toast.makeText(LoginPage.this,"Email cant be blank",Toast.LENGTH_LONG).show();
+            }
+            else if(pw.equals(""))
+            {
+                Toast.makeText(LoginPage.this,"Password cant be blank",Toast.LENGTH_LONG).show();
+            }
+            else
+            {
+                if(em.equals(Useremail) && pw.equals(Userpassword))
                 {
-                    Toast.makeText(LoginPage.this,"Email cant be blank",Toast.LENGTH_LONG).show();
-                }
-                else if(pw.equals(""))
-                {
-                    Toast.makeText(LoginPage.this,"Password cant be blank",Toast.LENGTH_LONG).show();
+
+                    SharedPreferences.Editor editor= sharedPreferences.edit();
+                    editor.putInt("login",1);
+                    editor.apply();
+
+                    Toast.makeText(LoginPage.this,"Login successfull",Toast.LENGTH_LONG).show();
+                    Intent intent= new Intent(LoginPage.this, Nav.class);
+                    startActivity(intent);
+                    finish();
                 }
                 else
                 {
-                    if(em.equals(Useremail) && pw.equals(Userpassword))
-                    {
-
-                        SharedPreferences.Editor editor= sharedPreferences.edit();
-                        editor.putInt("login",1);
-                        editor.apply();
-
-                        Toast.makeText(LoginPage.this,"Login successfull",Toast.LENGTH_LONG).show();
-                        Intent intent= new Intent(LoginPage.this, Nav.class);
-                        startActivity(intent);
-                        finish();
-                    }
-                    else
-                    {
-                        Toast.makeText(LoginPage.this,"Login Unsuccessfull",Toast.LENGTH_LONG).show();
-                    }
+                    Toast.makeText(LoginPage.this,"Login Unsuccessfull",Toast.LENGTH_LONG).show();
                 }
+
             }
         });
 
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent2 = new Intent(LoginPage.this,Register.class);
-                startActivity(intent2);
-            }
+        btn2.setOnClickListener(v -> {
+            Intent intent2 = new Intent(LoginPage.this,Register.class);
+            startActivity(intent2);
         });
     }
 }
